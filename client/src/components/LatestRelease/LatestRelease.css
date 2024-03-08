@@ -1,0 +1,31 @@
+.latest-release-wrapper{
+    margin-top: 4rem;
+}
+.latest-release-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hot-topic-item{
+    position: relative;
+}
+.latest-release-content{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap: 3rem;
+}
+.latest-release-main-image{
+    height: 25rem;
+}
+.latest-release-right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.hot-topic-description{
+    font-weight: 200;
+    color: #c5c5c5;
+    margin-bottom: 2rem
+}

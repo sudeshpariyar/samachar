@@ -1,0 +1,14 @@
+.news-card-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+.image-wrapper{
+    width: 10rem;
+   
+}
+.news-headline-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}

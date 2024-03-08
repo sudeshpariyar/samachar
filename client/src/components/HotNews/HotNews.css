@@ -1,0 +1,25 @@
+.hot-news-wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.hot-news-image{
+    width: 50%;
+}
+.topic-head{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hot-news-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-news-wrapper{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}

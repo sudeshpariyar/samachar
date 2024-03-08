@@ -1,0 +1,20 @@
+.individual-news-wrapper{ 
+    max-width: 22rem;
+}
+.news-image-wrapper{
+    position: relative;
+}
+.news-image{
+    max-width: 22rem;
+    opacity: 0.9;
+}
+.news-info{
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    left: 2rem;
+}
+.news-individual-description{
+    font-weight: 100;
+    color: gray;
+}

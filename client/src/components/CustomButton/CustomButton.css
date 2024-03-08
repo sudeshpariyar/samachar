@@ -1,0 +1,27 @@
+button{
+    padding: 0.8rem 2.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    cursor:pointer
+}
+.view-all-button{
+  background-color: #2B2D42;
+  color: #F8FFFF;
+  font-size: large;
+}
+
+.read-more-button{
+    background-color: #000000;
+    color: #F8FFFF;
+    font-size: large;
+}
+
+.hot-topic-button{
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    background-color: red;
+    color: white;
+    font-size: large;
+}

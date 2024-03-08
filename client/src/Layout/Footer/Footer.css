@@ -1,0 +1,12 @@
+.footer-wrapper{
+    background-color: black;
+    color: white;
+}
+.footer-content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.footer-right-component{
+    display: flex;
+    justify-content: space-around;
+}

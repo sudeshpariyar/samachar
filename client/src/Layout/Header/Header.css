@@ -1,0 +1,25 @@
+.header-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2B2D42;
+    color:#FBFCFF;
+    padding: 1.5rem;
+}
+.header-title{
+    font-size:xx-large
+}
+.header-middle-section{
+    display: flex;
+    gap: 2rem;
+    font-size: medium;
+}
+.search-icon{
+    border-right: 1px solid #FBFCFF;
+    padding-right: 1rem;
+}
+.header-right-section{
+    display: flex;
+    gap: 2rem;
+    font-size: small;
+}

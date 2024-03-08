@@ -1,0 +1,9 @@
+.latest-release-card-wrapper{
+    display: flex;
+    gap:1rem;
+}
+.latest-release-image{
+    width: 18rem;
+    max-height: 20rem;
+    object-fit: cover;
+}

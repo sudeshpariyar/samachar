@@ -1,0 +1,10 @@
+.all-news-header{
+    display: flex;
+    justify-content:center;
+}
+.all-news-wrapper{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
