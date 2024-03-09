@@ -3,6 +3,7 @@ import "./HomePage.css";
 import HotNews from "../../components/HotNews/HotNews";
 import LatestRelease from "../../components/LatestRelease/LatestRelease";
 import ComponentWrapper from "../../components/ComponentWrapper/ComponentWrapper";
+import Loader from "../../components/Loader/Loader";
 
 export interface INewsData {
   article_id: string;
@@ -29,10 +30,14 @@ const HomePage = () => {
   }, []);
   return (
     <div className="homepage-wrapper">
-      <ComponentWrapper>
-        <HotNews hotNews={hotNews} />
-        <LatestRelease latestNews={hotNews} />
-      </ComponentWrapper>
+      {hotNews.length ? (
+        <ComponentWrapper>
+          <HotNews hotNews={hotNews} />
+          <LatestRelease latestNews={hotNews} />
+        </ComponentWrapper>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

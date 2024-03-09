@@ -33,11 +33,18 @@ const LatestRelease = ({ latestNews }: { latestNews: INewsData[] }) => {
       <div className="latest-release-content">
         {latestNews && (
           <div className="hot-topic-item">
-            <img
-              className="latest-release-main-image"
-              src={latestNews[4]?.image_url}
-              alt="latest-release"
-            />
+            <div>
+              {latestNews[4]?.image_url ? (
+                <img
+                  className="latest-release-main-image"
+                  src={latestNews[4]?.image_url}
+                  alt="latest-release"
+                />
+              ) : (
+                <div className="image-not-found">Image not found.</div>
+              )}
+            </div>
+
             <CustomButton className="hot-topic-button">Hot Topic</CustomButton>
             <CustomHeading headingLevel="h3">
               {latestNews[4]?.title}

@@ -23,7 +23,7 @@ function App() {
         <Route path="/science" element={<CustomPages category="science" />} />
         <Route
           path="/search"
-          element={<CustomPages query={`${state.query}`} />}
+          element={<CustomPages query={`${state?.query}`} />}
         />
         <Route
           path="/entertainment"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { INewsData } from "../homePage/HomePage";
 import CustomAllNews from "../../components/CustomAllNews/CustomAllNews";
+import Loader from "../../components/Loader/Loader";
 
 const CustomPages = ({
   category,
@@ -9,7 +10,6 @@ const CustomPages = ({
   category?: string;
   query?: string;
 }) => {
-  console.log("searchState custom pages", query);
   const [news, setNews] = useState<INewsData[]>([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -36,9 +36,7 @@ const CustomPages = ({
     fetchData();
   }, [category, query]);
   return (
-    <div>
-      <CustomAllNews allNews={news} />
-    </div>
+    <div>{news.length ? <CustomAllNews allNews={news} /> : <Loader />}</div>
   );
 };
 

@@ -18,11 +18,16 @@ const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
       {hotNews.length && (
         <div>
           <div className="hot-news-wrapper">
-            <img
-              className="hot-news-image"
-              src={hotNews[0]?.image_url}
-              alt="hot-news"
-            />
+            {hotNews[0]?.image_url ? (
+              <img
+                className="hot-news-image"
+                src={hotNews[0]?.image_url}
+                alt="hot-news"
+              />
+            ) : (
+              <div className="hot-news-image-not-found">Image not found.</div>
+            )}
+
             <div className="hot-news-description">
               <div className="topic-head">
                 <FaCircle />
