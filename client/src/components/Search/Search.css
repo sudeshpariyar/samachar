@@ -1,0 +1,21 @@
+.modal-wrapper{
+    position: relative;
+}
+.search-input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 90%;
+}
+.search-category-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+.close-icon{
+    font-size: 3rem;
+    color:red;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
