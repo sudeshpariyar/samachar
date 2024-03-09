@@ -17,6 +17,7 @@
 .search-icon{
     border-right: 1px solid #FBFCFF;
     padding-right: 1rem;
+    cursor: pointer;
 }
 .header-right-section{
     display: flex;
