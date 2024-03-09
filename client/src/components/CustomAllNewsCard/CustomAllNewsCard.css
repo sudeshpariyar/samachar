@@ -1,29 +1,30 @@
-.individual-news-wrapper{ 
-    max-width: 22rem;
-}
 .news-image-wrapper{
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+   
 }
 .individual-image-not-found{
-    height: 12rem;
+    height: 19rem;
+    width: 100%;
     border: 1px solid #e6e6e6;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .news-image{
-    max-width: 22rem;
-    min-height: 12rem;
-    opacity: 0.9;
-    object-fit: contain;
+    width: 100%;
+    max-height: 19rem;
+    object-fit:contain;
 }
 .news-info{
     position: absolute;
     bottom: 1rem;
     color: white;
-    left: 2rem;
+    left: 5rem
 }
 .news-individual-description{
     font-weight: 100;
-    color: gray;
+    color: gray; 
 }

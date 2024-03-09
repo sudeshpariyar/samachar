@@ -5,9 +5,9 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import CustomHeading from "../CustomHeading/CustomHeading";
 import { INewsData } from "../../pages/homePage/HomePage";
 import { useNavigate } from "react-router-dom";
+import ReactTimeAgo from "react-time-ago";
 
 const LatestReleaseCard = ({ data }: { data: INewsData }) => {
-  console.log(data);
   let updatedDescription: string = "";
   const navigate = useNavigate();
   if (data.description?.length > 100) {
@@ -34,7 +34,7 @@ const LatestReleaseCard = ({ data }: { data: INewsData }) => {
 
       <div>
         <div>
-          {data.country},{data.pubDate}
+          {data.country}, <ReactTimeAgo date={data.pubDate} locale="en-US" />
         </div>
         <CustomHeading headingLevel="h3">{data.title}</CustomHeading>
         <div className="hot-topic-description">

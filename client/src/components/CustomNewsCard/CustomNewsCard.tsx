@@ -1,27 +1,24 @@
 import React from "react";
 import "./CustomNewsCard.css";
 import CustomHeading from "../CustomHeading/CustomHeading";
-const CustomNewsCard = ({
-  imageURL,
-  location,
-  title,
-  date,
-}: {
-  imageURL: string;
-  location: string;
-  title: string;
-  date: string;
-}) => {
+import { INewsData } from "../../pages/homePage/HomePage";
+import ReactTimeAgo from "react-time-ago";
+
+const CustomNewsCard = ({ newsData }: { newsData: INewsData }) => {
   return (
     <div className="news-card-wrapper">
-      <img className="image-wrapper" src={imageURL} alt="news" />
+      {newsData.image_url ? (
+        <img className="image-wrapper" src={newsData.image_url} alt="news" />
+      ) : (
+        <div className="news-card-image-not-found">image not found</div>
+      )}
 
       <div className="news-headline-wrapper">
-        <CustomHeading headingLevel="h3" className="no-margin">
-          {title}
+        <CustomHeading headingLevel="h4" className="no-margin">
+          {newsData.title}
         </CustomHeading>
-        <CustomHeading headingLevel="h6" className="no-margin">
-          {date}
+        <CustomHeading headingLevel="h6">
+          <ReactTimeAgo date={newsData.pubDate} locale="en-US" />
         </CustomHeading>
       </div>
     </div>
