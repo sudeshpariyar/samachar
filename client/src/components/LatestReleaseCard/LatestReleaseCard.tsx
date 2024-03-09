@@ -7,6 +7,7 @@ import { INewsData } from "../../pages/homePage/HomePage";
 import { useNavigate } from "react-router-dom";
 
 const LatestReleaseCard = ({ data }: { data: INewsData }) => {
+  console.log(data);
   let updatedDescription: string = "";
   const navigate = useNavigate();
   if (data.description?.length > 100) {
@@ -19,7 +20,18 @@ const LatestReleaseCard = ({ data }: { data: INewsData }) => {
   };
   return (
     <div className="latest-release-card-wrapper">
-      <img className="latest-release-image" src={data.image_url} alt="news" />
+      <div>
+        {data.image_url ? (
+          <img
+            className="latest-release-image"
+            src={data.image_url}
+            alt="news"
+          />
+        ) : (
+          <div className="latest-release-image-not-found">Image not found.</div>
+        )}
+      </div>
+
       <div>
         <div>
           {data.country},{data.pubDate}

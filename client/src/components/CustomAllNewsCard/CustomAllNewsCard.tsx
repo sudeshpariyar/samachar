@@ -18,7 +18,12 @@ const CustomAllNewsCard = ({ news }: { news: INewsData }) => {
   return (
     <div className="individual-news-wrapper">
       <div className="news-image-wrapper">
-        <img className="news-image" src={news.image_url} alt="news" />
+        {news.image_url ? (
+          <img className="news-image" src={news.image_url} alt="news" />
+        ) : (
+          <div className="individual-image-not-found">Image not found.</div>
+        )}
+
         <div className="news-info">{`${news.country[0]},${news.pubDate}`}</div>
       </div>
       <CustomHeading headingLevel="h4">{news.title}</CustomHeading>

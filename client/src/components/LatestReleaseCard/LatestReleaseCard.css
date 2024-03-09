@@ -7,3 +7,11 @@
     max-height: 20rem;
     object-fit: cover;
 }
+.latest-release-image-not-found{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+}

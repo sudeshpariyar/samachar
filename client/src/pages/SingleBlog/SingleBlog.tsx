@@ -16,11 +16,15 @@ const SingleBlog = ({ data }: { data: any }) => {
               <CustomHeading headingLevel="h3">{`${news.country[0]}, ${news.pubDate}`}</CustomHeading>
             </div>
           </ComponentWrapper>
-          <img
-            src={news.image_url}
-            alt="Single Blog"
-            className="single-blog-image"
-          />
+          <div>
+            {news.image_url && (
+              <img
+                src={news.image_url}
+                alt="Single Blog"
+                className="single-blog-image"
+              />
+            )}
+          </div>
           <ComponentWrapper>
             <div>
               <CustomHeading headingLevel="h5">

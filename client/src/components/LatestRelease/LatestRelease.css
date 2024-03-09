@@ -18,6 +18,13 @@
 .latest-release-main-image{
     height: 25rem;
 }
+.image-not-found{
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+}
 .latest-release-right-content{
     display: flex;
     flex-direction: column;
