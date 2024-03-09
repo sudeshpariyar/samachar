@@ -10,7 +10,7 @@ export interface INewsData {
   image_url: string;
   country: string[];
   title: string;
-  pubDate: string;
+  pubDate: Date;
   description: string;
   category: string[];
   source_icon: string;

@@ -5,6 +5,7 @@ import { FaCircle } from "react-icons/fa";
 import CustomNewsCard from "../CustomNewsCard/CustomNewsCard";
 import { INewsData } from "../../pages/homePage/HomePage";
 import { useNavigate } from "react-router-dom";
+import ReactTimeAgo from "react-time-ago";
 
 const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
   const slicedHotNews = hotNews?.slice(1, 4);
@@ -37,7 +38,8 @@ const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
                 {hotNews[0]?.title}
               </CustomHeading>
               <CustomHeading headingLevel="h3">
-                {hotNews[0]?.country[0]}, {hotNews[0]?.pubDate}
+                {hotNews[0]?.country[0]},{" "}
+                <ReactTimeAgo date={hotNews[0]?.pubDate} locale="en-US" />
               </CustomHeading>
               <CustomHeading headingLevel="p">
                 <span style={{ cursor: "pointer" }} onClick={handleClick}>
@@ -48,14 +50,8 @@ const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
           </div>
           <div className="side-news-wrapper">
             {slicedHotNews &&
-              slicedHotNews.map((newsData: any) => (
-                <CustomNewsCard
-                  key={newsData.article_id}
-                  imageURL={newsData.image_url}
-                  location={newsData.country[0]}
-                  title={newsData.title}
-                  date={newsData.pubDate}
-                />
+              slicedHotNews.map((newsData: INewsData) => (
+                <CustomNewsCard key={newsData.article_id} newsData={newsData} />
               ))}
           </div>
         </div>
