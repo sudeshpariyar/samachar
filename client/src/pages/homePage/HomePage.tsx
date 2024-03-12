@@ -4,13 +4,14 @@ import HotNews from "../../components/HotNews/HotNews";
 import LatestRelease from "../../components/LatestRelease/LatestRelease";
 import ComponentWrapper from "../../components/ComponentWrapper/ComponentWrapper";
 import Loader from "../../components/Loader/Loader";
+import LifeTopics from "../../components/LifeTopics/LifeTopics";
 
 export interface INewsData {
   article_id: string;
   image_url: string;
   country: string[];
   title: string;
-  pubDate: Date;
+  pubDate: Date | number;
   description: string;
   category: string[];
   source_icon: string;
@@ -31,10 +32,14 @@ const HomePage = () => {
   return (
     <div className="homepage-wrapper">
       {hotNews.length ? (
-        <ComponentWrapper>
-          <HotNews hotNews={hotNews} />
-          <LatestRelease latestNews={hotNews} />
-        </ComponentWrapper>
+        <div>
+          <ComponentWrapper>
+            <HotNews hotNews={hotNews} />
+            <LatestRelease latestNews={hotNews} />
+          </ComponentWrapper>
+          {/* <BestMovies /> */}
+          <LifeTopics />
+        </div>
       ) : (
         <Loader />
       )}
