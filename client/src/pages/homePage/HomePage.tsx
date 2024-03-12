@@ -5,6 +5,7 @@ import LatestRelease from "../../components/LatestRelease/LatestRelease";
 import ComponentWrapper from "../../components/ComponentWrapper/ComponentWrapper";
 import Loader from "../../components/Loader/Loader";
 import LifeTopics from "../../components/LifeTopics/LifeTopics";
+import { Analytics } from "@vercel/analytics/react";
 
 export interface INewsData {
   article_id: string;
@@ -34,6 +35,7 @@ const HomePage = () => {
       {hotNews.length ? (
         <div>
           <ComponentWrapper>
+            <Analytics />
             <HotNews hotNews={hotNews} />
             <LatestRelease latestNews={hotNews} />
           </ComponentWrapper>
