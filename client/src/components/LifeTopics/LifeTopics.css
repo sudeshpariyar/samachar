@@ -1,0 +1,35 @@
+.life-topics-wrapper{
+    margin-top: 4rem;
+    position: relative;
+}
+.life-topic-container{
+    width: 100%;
+}
+.life-topic-background{
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    background-image: linear-gradient(white, black);
+}
+
+.life-topic-container{
+    position: absolute;
+    top: 10%;
+    color: white;
+    width: 60%;
+}
+.life-topic-header{
+    display: flex;
+    align-items: center;
+}
+.slide-buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.life-topic-read-more{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+}

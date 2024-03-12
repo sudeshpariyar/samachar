@@ -5,13 +5,15 @@
 .image-wrapper{
     width: 10rem;
     object-fit: cover;
+    cursor: pointer;
 }
 .news-card-image-not-found{
     border: 1px solid #e6e6e6;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 10rem
+    min-width: 10rem;
+    cursor: pointer;
 }
 .news-headline-wrapper{
     display: flex;

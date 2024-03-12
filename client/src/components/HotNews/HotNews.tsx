@@ -38,8 +38,11 @@ const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
                 {hotNews[0]?.title}
               </CustomHeading>
               <CustomHeading headingLevel="h3">
-                {hotNews[0]?.country[0]},{" "}
-                <ReactTimeAgo date={hotNews[0]?.pubDate} locale="en-US" />
+                {hotNews[0]?.country[0]},
+                <ReactTimeAgo
+                  date={hotNews[0]?.pubDate as number}
+                  locale="en-US"
+                />
               </CustomHeading>
               <CustomHeading headingLevel="p">
                 <span style={{ cursor: "pointer" }} onClick={handleClick}>

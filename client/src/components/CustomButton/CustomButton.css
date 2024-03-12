@@ -5,6 +5,10 @@ button{
     outline: none;
     cursor:pointer
 }
+.search-button:hover{
+    background-color: black;
+    color: white;
+}
 .view-all-button{
   background-color: #2B2D42;
   color: #F8FFFF;
@@ -25,3 +29,4 @@ button{
     color: white;
     font-size: large;
 }
+

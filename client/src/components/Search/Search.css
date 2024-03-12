@@ -5,17 +5,20 @@
     border: none;
     border-bottom: 1px solid black;
     outline: none;
-    width: 90%;
+    width: 100%;
 }
 .search-category-wrapper{
     display: flex;
     gap: 1rem;
 }
 .close-icon{
-    font-size: 3rem;
-    color:red;
+    /* font-size: 3rem; */
     cursor: pointer;
     position: fixed;
     top: 1rem;
     right: 1rem;
+}
+.search-form{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }

@@ -27,7 +27,7 @@ const CustomAllNewsCard = ({ news }: { news: INewsData }) => {
 
         <div className="news-info">
           {`${news.country[0]},`}
-          <ReactTimeAgo date={news.pubDate} locale="en-US" />
+          <ReactTimeAgo date={news.pubDate as number} locale="en-US" />
         </div>
       </div>
       <CustomHeading headingLevel="h4">{news.title}</CustomHeading>

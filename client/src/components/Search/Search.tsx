@@ -43,7 +43,7 @@ const Search = ({
         onRequestClose={closeModal}
       >
         <CustomHeading headingLevel="h1">Search News</CustomHeading>
-        <form onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={handleSubmit}>
           <input
             className="search-input"
             type="text"
@@ -54,27 +54,27 @@ const Search = ({
 
         <CustomHeading headingLevel="h2">Category News</CustomHeading>
         <div className="search-category-wrapper">
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/sports">Sports</Link>
           </CustomButton>
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/health">Health</Link>
           </CustomButton>
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/political">Political</Link>
           </CustomButton>
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/business">Business</Link>
           </CustomButton>
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/science">Science</Link>
           </CustomButton>
-          <CustomButton onClick={closeModal}>
+          <CustomButton className="search-button" onClick={closeModal}>
             <Link to="/entertainment">Entertainment</Link>
           </CustomButton>
         </div>
         <div className="close-icon" onClick={closeModal}>
-          <IoCloseCircleOutline />
+          <IoCloseCircleOutline color="red" size="40" />
         </div>
       </ReactModal>
       ;
