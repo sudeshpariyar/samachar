@@ -3,7 +3,8 @@ import "./SingleBlog.css";
 import CustomHeading from "../../components/CustomHeading/CustomHeading";
 import { INewsData } from "../homePage/HomePage";
 import ComponentWrapper from "../../components/ComponentWrapper/ComponentWrapper";
-import ReactTimeAgo from "react-time-ago";
+import CustomTimeAgo from "../../components/CustomTimeAgo/CustomTimeAgo";
+import CustomCountryName from "../../components/CustomCountryName/CustomCountryName";
 
 const SingleBlog = ({ data }: { data: any }) => {
   const { news }: { news: INewsData } = data;
@@ -14,9 +15,9 @@ const SingleBlog = ({ data }: { data: any }) => {
           <ComponentWrapper>
             <div className="single-blog-header-wrapper">
               <CustomHeading headingLevel="h1"> {news.title}</CustomHeading>
-              <CustomHeading headingLevel="h3">
-                {`${news.country[0]}, `}
-                <ReactTimeAgo date={news.pubDate as number} locale="en-US" />
+              <CustomHeading headingLevel="h3" className="country-and-date">
+                <CustomCountryName country={`${news.country[0]},`} />
+                <CustomTimeAgo date={news.pubDate as Date} />
               </CustomHeading>
             </div>
           </ComponentWrapper>

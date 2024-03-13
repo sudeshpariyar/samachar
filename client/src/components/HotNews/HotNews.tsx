@@ -5,7 +5,8 @@ import { FaCircle } from "react-icons/fa";
 import CustomNewsCard from "../CustomNewsCard/CustomNewsCard";
 import { INewsData } from "../../pages/homePage/HomePage";
 import { useNavigate } from "react-router-dom";
-import ReactTimeAgo from "react-time-ago";
+import CustomTimeAgo from "../CustomTimeAgo/CustomTimeAgo";
+import CustomCountryName from "../CustomCountryName/CustomCountryName";
 
 const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
   const slicedHotNews = hotNews?.slice(1, 4);
@@ -31,18 +32,15 @@ const HotNews = ({ hotNews }: { hotNews: INewsData[] }) => {
 
             <div className="hot-news-description">
               <div className="topic-head">
-                <FaCircle />
+                <FaCircle color="red" />
                 <div>Hot Topic</div>
               </div>
               <CustomHeading headingLevel="h1">
                 {hotNews[0]?.title}
               </CustomHeading>
-              <CustomHeading headingLevel="h3">
-                {hotNews[0]?.country[0]},
-                <ReactTimeAgo
-                  date={hotNews[0]?.pubDate as number}
-                  locale="en-US"
-                />
+              <CustomHeading headingLevel="h2" className="country-and-date">
+                <CustomCountryName country={hotNews[0]?.country[0]} />,
+                <CustomTimeAgo date={hotNews[0]?.pubDate as Date} />
               </CustomHeading>
               <CustomHeading headingLevel="p">
                 <span style={{ cursor: "pointer" }} onClick={handleClick}>

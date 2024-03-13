@@ -22,7 +22,8 @@
     position: absolute;
     bottom: 1rem;
     color: white;
-    left: 5rem
+    left: 5rem;
+    display: flex;
 }
 .news-individual-description{
     font-weight: 100;

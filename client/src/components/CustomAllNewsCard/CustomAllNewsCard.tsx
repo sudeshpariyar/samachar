@@ -5,7 +5,8 @@ import CustomHeading from "../CustomHeading/CustomHeading";
 import CustomButton from "../CustomButton/CustomButton";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import ReactTimeAgo from "react-time-ago";
+import CustomTimeAgo from "../CustomTimeAgo/CustomTimeAgo";
+import CustomCountryName from "../CustomCountryName/CustomCountryName";
 
 const CustomAllNewsCard = ({ news }: { news: INewsData }) => {
   let updatedNewsDescription;
@@ -26,8 +27,8 @@ const CustomAllNewsCard = ({ news }: { news: INewsData }) => {
         )}
 
         <div className="news-info">
-          {`${news.country[0]},`}
-          <ReactTimeAgo date={news.pubDate as number} locale="en-US" />
+          <CustomCountryName country={`${news.country[0]},`} />
+          <CustomTimeAgo date={news.pubDate as Date} />
         </div>
       </div>
       <CustomHeading headingLevel="h4">{news.title}</CustomHeading>

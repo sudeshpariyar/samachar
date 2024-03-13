@@ -2,8 +2,9 @@ import React from "react";
 import "./CustomNewsCard.css";
 import CustomHeading from "../CustomHeading/CustomHeading";
 import { INewsData } from "../../pages/homePage/HomePage";
-import ReactTimeAgo from "react-time-ago";
 import { useNavigate } from "react-router-dom";
+import CustomTimeAgo from "../CustomTimeAgo/CustomTimeAgo";
+import CustomCountryName from "../CustomCountryName/CustomCountryName";
 
 const CustomNewsCard = ({ newsData }: { newsData: INewsData }) => {
   const navigate = useNavigate();
@@ -30,8 +31,10 @@ const CustomNewsCard = ({ newsData }: { newsData: INewsData }) => {
         <CustomHeading headingLevel="h4" className="no-margin">
           {newsData.title}
         </CustomHeading>
-        <CustomHeading headingLevel="h6">
-          <ReactTimeAgo date={newsData.pubDate as number} locale="en-US" />
+        <CustomHeading headingLevel="h6" className="no-margin country-and-date">
+          <CustomCountryName country={newsData.country[0]} />
+          ,
+          <CustomTimeAgo date={newsData.pubDate as Date} />
         </CustomHeading>
       </div>
     </div>
