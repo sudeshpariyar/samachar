@@ -5,9 +5,15 @@
     background-color: #2B2D42;
     color:#FBFCFF;
     padding: 1.5rem;
+    position: relative;
 }
 .header-title{
     font-size:xx-large
+}
+.header__navbar__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
 .header-middle-section{
     display: flex;
@@ -23,4 +29,30 @@
     display: flex;
     gap: 2rem;
     font-size: small;
+}
+.mobile__navbar__wrapper{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #2B2D42;
+    height: 100vh;
+    z-index: 99;
+    padding: 2.5rem;
+    margin-top:5rem ;
+    gap: 2rem;
+    width: 20%;
+}
+.mobile__nav__section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media only screen and (max-width: 750px) {
+    .header-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+   
 }

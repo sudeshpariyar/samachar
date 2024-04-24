@@ -33,3 +33,13 @@
     color: white;
     font-size: large;
 }
+@media only screen and (max-width: 750px) {
+    .life-topic-background{
+        width: 100%;
+        height: 25rem;
+    }
+    .slideHorizontal___1NzNV{
+        height: 11rem!important;
+    }
+   
+}

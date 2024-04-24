@@ -36,3 +36,12 @@
     color: #c5c5c5;
     margin-bottom: 2rem
 }
+@media only screen and (max-width: 750px) {
+    .latest-release-content{
+        grid-template-columns:1fr
+    }
+    .latest-release-main-image{
+        width: 100%;
+       height: auto;
+    }
+}

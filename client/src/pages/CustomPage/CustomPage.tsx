@@ -14,18 +14,21 @@ const CustomPages = ({
   useEffect(() => {
     const fetchData = async () => {
       if (category) {
+        setNews([]);
         const response = await fetch(
           `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&language=en&category=${category}`
         );
         const newData = await response.json();
         setNews(newData.results);
       } else if (query) {
+        setNews([]);
         const response = await fetch(
           `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&language=en&qInTitle=${query}`
         );
         const newData = await response.json();
         setNews(newData.results);
       } else {
+        setNews([]);
         const response = await fetch(
           `https://newsdata.io/api/1/news?apikey=${process.env.REACT_APP_API_KEY}&language=en`
         );
