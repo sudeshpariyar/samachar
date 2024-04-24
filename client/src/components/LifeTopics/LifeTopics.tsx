@@ -16,9 +16,11 @@ import CustomHeading from "../CustomHeading/CustomHeading";
 import CustomButton from "../CustomButton/CustomButton";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import useWindowWidthAndHeight from "../../customHooks/useWindowWidthAndHeight";
 
 const LifeTopics = () => {
   const [lifeTopicNews, setLifeTopicNews] = useState<INewsData[]>([]);
+  const [width, height] = useWindowWidthAndHeight();
   const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
@@ -57,13 +59,17 @@ const LifeTopics = () => {
               <Slider>
                 {lifeTopicNews.map((news, index) => (
                   <Slide index={index} key={news.article_id}>
-                    <CustomHeading headingLevel="h1">
+                    <CustomHeading headingLevel={width > 750 ? "h1" : "h5"}>
                       {news.title.length > 100
                         ? news.title.substring(0, 99) + "..."
                         : news.title}
                     </CustomHeading>
                     <CustomButton
-                      className="life-topic-read-more"
+                      className={
+                        width > 750
+                          ? "life-topic-read-more"
+                          : "mobile__readmore"
+                      }
                       onClick={() => handleReadMore(news)}
                     >
                       Read More <MdOutlineArrowOutward />

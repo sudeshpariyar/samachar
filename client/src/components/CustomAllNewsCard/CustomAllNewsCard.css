@@ -29,3 +29,9 @@
     font-weight: 100;
     color: gray; 
 }
+@media only screen and (max-width: 750px) {
+    .news-image{
+       
+        max-height: 100%;
+    }
+}
